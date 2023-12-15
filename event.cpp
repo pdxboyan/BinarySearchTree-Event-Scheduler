@@ -107,7 +107,7 @@ void Event::queryBase(istream& in) {
 	// Date input
 	// _________________________________________
 
-	cout << "\n - Please enter the date of the event in mm/dd/yy - \n"
+	cout << "\n - Please enter the date of the event - \n"
 		 << "Month: ";
 	in >> month;
 
@@ -152,7 +152,7 @@ void Event::queryBase(istream& in) {
 			}
 			break;
 
-		case '2':
+		case 2:
 			while(day <= 0 || day > 28) {
 				cout << "\nInvalid day!" << endl;
 
@@ -261,6 +261,19 @@ string Event::valiDATE(int month, int day, int year) {
 
 
 /***********************************************************************
+Description: Returns an event name
+
+Parameters: None
+
+Returned: A const char event name
+***********************************************************************/
+const char* Event::getName() {
+	return this->name;
+}
+
+
+
+/***********************************************************************
 Description: Compares a string to the name char array of an Event
 object
 
@@ -268,7 +281,7 @@ Parameters: String by reference
 
 Returned: True or false
 ***********************************************************************/
-bool Event::compareName(const char* compareName) {
+int Event::compareName(const char* compareName) {
 	if(strcmp(this->name, compareName) == 0) return 1;
 	return 0;
 }

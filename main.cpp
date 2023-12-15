@@ -1,4 +1,4 @@
-/***********************************************************************
+	/***********************************************************************
 Class: CS202
 Assignment: Project03
 Author: Boyan Gankov
@@ -109,8 +109,8 @@ Returned: Nothing
 ***********************************************************************/
 void displayMenu() {
 	cout << "______________________________________\n"
-	<< "\n\tv: View full event list\n"
-	<< "\ts: Schedule an event (Retrieve)\n"
+	<< "\n\tv: View all potential events\n"
+	<< "\ts: Schedule an event for me\n"
 	<< "\tl: List my scheduled events\n"
 	<< "\td: Developer Commands\n"
 	<< "\tq: Quit\n"

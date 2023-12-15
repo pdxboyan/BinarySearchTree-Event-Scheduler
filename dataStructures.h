@@ -28,13 +28,14 @@ class Node {
 		Node(Event* &newEvent);
 		~Node();
 
+		const char* getName();
 		Event* getEvent();
 		Node* getLeft();
 		Node* getRight();
 		void setLeft(Node* &newLeft);
 		void setRight(Node* &newRight);
-		bool compareNode(const Event* compare);
-		bool compareName(const char* name);
+		int compareNode(const Event* compare);
+		int compareName(const char* name);
 		void display();
 
 	protected:
@@ -72,9 +73,10 @@ class BST {
 	protected:
 		Node* root;
 
-		void destroy(Node* &currRoot);
+		void destroy(Node* currRoot);
 		void add(Node* &currRoot, Event* &tempEvent);
-		int retrieve(Node* &currRoot, const char* usrIn, Event* &retrieved);
+		int retrieve(Node* currRoot, const char* usrIn, Event* &retrieved);
 		void remove(Node* &currRoot, Node* &currP, const char* usrIn);
+		Node* findMin(Node* currRoot);
 		void display(Node* currRoot, int &currPos) const;
 };

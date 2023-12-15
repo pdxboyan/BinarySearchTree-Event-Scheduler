@@ -41,7 +41,8 @@ class Event {
 
 		virtual ostream& display(ostream& out) const;
 		void queryBase(istream& in);
-		bool compareName(const char* compareName);
+		int compareName(const char* compareName);
+		const char* getName();
 		bool compareGLT(const Event& ev2) const; // Greater & Less Than
 		bool compareGLTE(const Event& ev2) const; // Greater & Less Than, or Equal to
 		bool compareE(const Event& ev2) const; // Equal to
